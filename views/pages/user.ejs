@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <%- include('../partials/head', { title:'Home Portal' }) %>
+    <link rel="stylesheet" href="home.css">
+
+</head>
+
+<body>
+
+  <header>
+    <%- include('../partials/header'); %>
+  </header>
+
+
+
+
+  <main>
+    <div class="menu p-4 shadow mb-5 bg-body-tertiary">
+      <nav id="navbar-example" class="h-100 flex-column  ">
+        <nav class="nav nav-pills flex-column">
+          <a class="nav-link" href="/home">Home</a>
+
+          <a class="nav-link active-link" href="/user">User</a>
+
+
+        </nav>
+      </nav>
+
+    </div>
+    <div class="dash-wrap">
+      <div class="dashboard">
+
+
+        <div class="p-5">
+          <div class="shadow  mb-5 bg-body-tertiary rounded">
+            <div class="card">
+              <div class="card-header">
+                <h3>User Details</h3>
+                <button type="button" class="btn btn-light"><a href="/addUser">Add User</a></button>
+              </div>
+              <div class="display-table" style="height: 80vh; overflow:auto; ">
+                <table class="table table-bordered overflow-auto userTable" id="User">
+                  <thead style="position: sticky; top:0;">
+
+                    <tr>
+                      <th scope="col">id</th>
+                      <th scope="col">name</th>
+                      <th scope="col">email</th>
+                      <th scope="col">password</th>
+                      <th scope="col">operations</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <% var id=1; userValues.forEach((user)=> { %>
+                      <tr>
+                        <th scope="row">
+                          <%= id %>
+                            </td>
+                        <td>
+                          <%= user.name %>
+                        </td>
+                        <td>
+                          <%= user.email %>
+                        </td>
+                        <td>
+                          <%= user.password %>
+                        </td>
+                        <td><a href="/update?id=<%= user.id %>"><i class="fa-regular fa-user-pen"
+                              style="color: rgb(7, 201, 0);"></i></a> <a href="/remove?id=<%= user.id %>"><i
+                              class="fa-regular fa-user-minus" style="color:crimson;"></i></a></td>
+                      </tr>
+                      <% id++ }) %>
+
+
+
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+        <footer>
+          <%- include('../partials/footer'); %>
+        </footer>
+      </div>
+    </div>
+
+  </main>
+
+
+  <script src="home.js"></script>
+</body>
+
+</html>

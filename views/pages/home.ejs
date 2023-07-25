@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('../partials/head', { title:'Home Portal' }) %>
+        <link rel="stylesheet" href="home.css">
+
+</head>
+
+<body>
+
+    <header>
+        <%- include('../partials/header'); %>
+    </header>
+
+
+
+
+    <main>
+        <div class="menu p-4 shadow mb-5 bg-body-tertiary">
+            <nav id="navbar-example" class="h-100 flex-column  ">
+                <nav class="nav nav-pills flex-column">
+                    <a class="nav-link active-link" href="/home">Home</a>
+
+                    <a class="nav-link" href="/user">User</a>
+
+
+                </nav>
+            </nav>
+
+        </div>
+        <div class="dash-wrap">
+            <div class="card h-auto text-bg-dark p-5 opacity-50 rounded-0 card-background">
+                <!-- <figure>
+                    <blockquote class="blockquote"> -->
+                <p class="fs-1">Dashboard</p>
+                <!-- </blockquote>
+                            <figcaption class="blockquote-footer">
+                                Welcome to your portal
+                            </figcaption>
+                        </figure> -->
+            </div>
+
+            <div class="dashboard home">
+                <div class="container text-center">
+                    <div class="row">
+                        <div class="col">
+
+                            <div class="card p-4 h-100 shadow mb-3 bg-body-tertiary rounded">
+                                <div class="card-body">
+                                    <p class="fs-1 greatings">Welcome to our Admin Portal!</p>
+                                    Gain full control and streamline your administrative tasks with our powerful and
+                                    intuitive Admin Portal. Designed to simplify your workflows and enhance
+                                    productivity, our portal provides a comprehensive set of tools and features to help
+                                    you manage your system efficiently.
+
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="row mt-4 ">
+                        <div class="col">
+                            <div class="card h-100 shadow bg-body-tertiary rounded">
+                                <div class="card-header">Task Completion:</div>
+                                <div class="display-table" style="height: 300px; overflow:auto;">
+
+                                    <table class="table table-bordered">
+                                        <thead style="position: sticky; top:0;">
+                                            <tr>
+                                                <th>#</th>
+                                                <th>Task Name</th>
+                                                <th>Assigned To</th>
+                                                <th>Completed On</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>Update Website Content</td>
+                                                <td>John Doe</td>
+                                                <td>2023-07-06</td>
+                                            </tr>
+                                            <tr>
+                                                <td>2</td>
+                                                <td>Review Sales Report</td>
+                                                <td>Jane Smith</td>
+                                                <td>2023-07-05</td>
+                                            </tr>
+                                            <tr>
+                                                <td>3</td>
+                                                <td>Fix Bug in User Registration</td>
+                                                <td>David Johnson</td>
+                                                <td>2023-07-04</td>
+                                            </tr>
+                                            <tr>
+                                                <td>4</td>
+                                                <td>Create Marketing Campaign</td>
+                                                <td>Sarah Thompson</td>
+                                                <td>2023-07-02</td>
+                                            </tr>
+                                            <tr>
+                                                <td>5</td>
+                                                <td>Implement Payment Gateway</td>
+                                                <td>Robert Wilson</td>
+                                                <td>2023-07-01</td>
+                                            </tr>
+                                            <tr>
+                                                <td>6</td>
+                                                <td>Develop Mobile App Prototype</td>
+                                                <td>Emily Davis</td>
+                                                <td>2023-06-30</td>
+                                            </tr>
+                                            <tr>
+                                                <td>7</td>
+                                                <td>Conduct User Testing</td>
+                                                <td>Amy Johnson</td>
+                                                <td>2023-06-29</td>
+                                            </tr>
+                                            <tr>
+                                                <td>8</td>
+                                                <td>Optimize Database Performance</td>
+                                                <td>Michael Anderson</td>
+                                                <td>2023-06-28</td>
+                                            </tr>
+
+                                            <!-- Additional completed task rows here -->
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+
+                            <div class="card h-100 shadow bg-body-tertiary rounded">
+                                <div class="card-header">Pending Requests:</div>
+                                <div class="display-table" style="height: 300px; overflow:auto;">
+
+                                    <table class="table table-bordered">
+                                        <thead style="position: sticky; top:0;">
+                                            <tr>
+                                                <th>#</th>
+                                                <th>Task Name</th>
+                                                <th>Assigned To</th>
+                                                <th>Status</th>
+                                                <th>Deadline</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>Update Website Content</td>
+                                                <td>John Doe</td>
+                                                <td><span class="badge bg-primary">In Progress</span></td>
+                                                <td>2023-07-15</td>
+                                            </tr>
+                                            <tr>
+                                                <td>2</td>
+                                                <td>Review Sales Report</td>
+                                                <td>Jane Smith</td>
+                                                <td><span class="badge bg-warning text-dark">Pending</span></td>
+                                                <td>2023-07-10</td>
+                                            </tr>
+                                            <tr>
+                                                <td>3</td>
+                                                <td>Fix Bug in User Registration</td>
+                                                <td>David Johnson</td>
+                                                <td><span class="badge bg-warning text-dark">Pending</span></td>
+                                                <td>2023-07-07</td>
+                                            </tr>
+                                            <tr>
+                                                <td>4</td>
+                                                <td>Create Marketing Campaign</td>
+                                                <td>Sarah Thompson</td>
+                                                <td><span class="badge bg-warning text-dark">Pending</span></td>
+                                                <td>2023-07-20</td>
+                                            </tr>
+                                            <tr>
+                                                <td>5</td>
+                                                <td>Implement Payment Gateway</td>
+                                                <td>Robert Wilson</td>
+                                                <td><span class="badge bg-warning text-dark">Pending</span></td>
+                                                <td>2023-07-12</td>
+                                            </tr>
+                                            <tr>
+                                                <td>6</td>
+                                                <td>Develop Mobile App Prototype</td>
+                                                <td>Emily Davis</td>
+                                                <td><span class="badge bg-warning text-dark">Pending</span></td>
+                                                <td>2023-07-18</td>
+                                            </tr>
+                                            <!-- Additional task rows here -->
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="row mt-4">
+                        <div class="col">
+                            <div class="card h-100 text-bg-primary shadow rounded">
+                                <div class="card-header p-4">Total User: 8<br></div>
+
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card h-100 text-bg-success shadow rounded">
+                                <div class="card-header p-4">Task Completion: 3</div>
+
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card h-100 text-bg-danger shadow rounded">
+                                <div class="card-header p-4">Pending Requests: 3<br></div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-4 ">
+                        <div class="col">
+
+                            <div class="card h-100 shadow bg-body-tertiary rounded">
+                                <div class="card-header">Upcoming Events:</div>
+                                <div class="display-table" style="height: 300px; overflow:auto;">
+
+                                    <table class="table table-striped">
+                                        <thead style="position: sticky; top:0;">
+                                            <tr>
+                                                <th>#</th>
+                                                <th>Event Name</th>
+                                                <th>Date</th>
+                                                <th>Time</th>
+                                                <th>Location</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>Conference Presentation</td>
+                                                <td>2023-07-12</td>
+                                                <td>10:00 AM</td>
+                                                <td>Grand Ballroom</td>
+                                            </tr>
+                                            <tr>
+                                                <td>2</td>
+                                                <td>Team Building Workshop</td>
+                                                <td>2023-07-20</td>
+                                                <td>2:00 PM</td>
+                                                <td>Training Room A</td>
+                                            </tr>
+                                            <tr>
+                                                <td>3</td>
+                                                <td>Product Launch Event</td>
+                                                <td>2023-07-25</td>
+                                                <td>6:30 PM</td>
+                                                <td>Convention Center</td>
+                                            </tr>
+                                            <!-- Additional event rows here -->
+                                        </tbody>
+                                    </table>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col">
+
+                            <div class="card h-100 shadow bg-body-tertiary rounded">
+                                <div class="card-header">Notifications:</div>
+                                <div class="display-table" style="height: 300px; overflow:auto;">
+
+                                    <table class="table table-striped">
+                                        <thead style="position: sticky; top:0;">
+                                            <tr>
+                                                <th>Date</th>
+                                                <th>Notification</th>
+                                                <th>Action</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>2023-07-06</td>
+                                                <td>System Maintenance Scheduled for July 10th</td>
+                                                <td><a href="#">View Details</a></td>
+                                            </tr>
+                                            <tr>
+                                                <td>2023-07-05</td>
+                                                <td>New User Account Created: John Doe</td>
+                                                <td><a href="#">View User Profile</a></td>
+                                            </tr>
+                                            <tr>
+                                                <td>2023-07-03</td>
+                                                <td>Task Assignment: Review Sales Report</td>
+                                                <td><a href="#">Take Action</a></td>
+                                            </tr>
+                                            <!-- Additional notification rows here -->
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-4">
+                        <div class="col">
+
+                            <div class="card p-4 shadow  mb-5 bg-body-tertiary rounded">
+                                <div class="card-body">
+                                    Thank you for visiting our Admin Portal! We hope you found the information and tools
+                                    provided valuable for streamlining your administrative tasks. If you have any
+                                    questions, need further assistance, or would like to provide feedback, please don't
+                                    hesitate to reach out to our support team. We are here to help you make the most out
+                                    of your experience with our Admin Portal. Stay organized, stay productive, and enjoy
+                                    the benefits of efficient administration.
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <footer>
+                    <%- include('../partials/footer'); %>
+                </footer>
+
+            </div>
+        </div>
+    </main>
+
+
+
+    <script src="home.js"></script>
+</body>
+
+</html>

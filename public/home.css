@@ -1,0 +1,99 @@
+body{
+    background:  url(OANWZJ0.jpg) no-repeat;
+    background-size: cover;
+
+
+}
+
+main{
+    display: flex;  
+}
+
+.menu{
+    width: 280px;    
+    position: fixed;
+    height: 100%;
+    bottom: 0;
+    left: 0;
+    top: 56px;
+    transition: 0.5s ease;
+}
+
+.menu.close{
+
+    transform: translateX(-280px);
+}
+
+.dash-wrap{
+    position: absolute;
+    top: 56px;
+    left: 280px;
+    right: 0;
+    transition: 0.5s ease;
+
+}
+
+
+.dashboard{
+    position: absolute;
+    height: 140vh;
+    padding: 0 50px ;
+    /* top:120px; */
+    z-index: -1;
+    right: 0;
+    left: 0;
+    transition: 0.5s ease;
+
+    
+}
+
+
+
+.dashboard.home{
+    top: 120px;
+}
+
+.dash-wrap.fullscreen{
+    left: 0;
+}
+
+.dashboard.fullscreen{
+    left: 140px;
+    right: 140px;
+}
+
+
+.card{
+    z-index: 1;
+}
+
+.card.card-background{
+    z-index: -1;
+
+}
+
+.card-header{
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar{
+    z-index: 2
+}
+
+#User{
+    height: 500px;
+}
+
+.nav-link{
+    color: black ;
+}
+.active-link{
+    background: rgba(128, 128, 128, 0.1);
+    color: rgb(255, 92, 143);
+    right: 0;
+}
+
+.greatings{
+    color: rgb(255, 92, 143);
+}
