@@ -255,7 +255,7 @@ app.post("/user/update", (req, res) => {
 })
 
 //set view port
-app.listen(3000);
+app.listen(3001);
 
 app.use(express.static('public'));
 
